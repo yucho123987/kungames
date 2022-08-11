@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>扫 鲲</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="dialog-bg"></div>
+    <div id="dialog">
+      <h3 id="dialog-title"></h3>
+      <p id="dialog-content"></p>
+      <button id="go-back" class="return">回到主页面</button>
+      <button id="restart">重新开始</button>
+    </div>
+    <div id="blue-screen">
+      <div id="blue-screen-smile">: )</div>
+      <div id="blue-screen-tip">
+        <div>你的游戏遇到问题，需要刷新。</div>
+        <div>我们仅显示某些错误信息，不会为你刷新。</div>
+        <div><span id="blue-screen-progress">10</span>% 完成</div>
+      </div>
+      <div id="blue-screen-info">
+        <span id="blue-screen-qrcode"></span><span id="blue-screen-message">
+          <div>有关此问题的详细信息和可能的解决方法，请访问 http://8d1.cn/EETcL</div>
+          <br />
+          <div>如要联系作者，请提供以下信息：</div>
+          <div>错误信息：<span id="blue-screen-error-message">鸡你太美</span></div>
+          <div>位置：<span id="blue-screen-error-position">第 11 行第 4列</span></div>
+        </span>
+      </div>
+    </div>
+    <div id="game">
+      <div id="loading">
+        <div>加载资源中...</div>
+        <div id="progress-bar"><div id="progress"></div></div>
+      </div>
+      <div id="game-panel" class="panel">
+        <div><span id="game-time">时长：0s</span><span id="game-mark-count">剩余标记数：10</span></div>
+        <div id="game-block-container"></div>
+      </div>
+      <div id="start-panel" class="panel">
+        <button id="start-game">开团</button>
+        <button id="settings">设置</button>
+        <button id="share">分享</button>
+      </div>
+      <div id="settings-panel" class="panel">
+        <div class="panel-title">游戏设置</div>
+        <div>大小：<input id="size_w" type="number" value="20" min="5" max="40" step="1" /> x <input id="size_h" type="number" value="20" min="5" max="40" step="1" /></div>
+        <div id="sound-switch-group">
+          <span>音效：</span><switch id="sound-switch" status="on"></switch>
+          <span>音乐：</span><switch id="music-switch" status="on"></switch>
+        </div>
+        <button id="save-settings">保存</button>
+        <button class="return">返回</button>
+      </div>
+      <div id="share-panel" class="panel">
+        <div class="panel-title">分享游戏</div>
+        <div id="game-qrcode"></div>
+        <input id="game-url" type="text" value="https://findkun.ikun184.tk/" readonly="readonly">
+        <button class="return">返回</button>
+      </div>
+    </div>
+    <div id="res-load"></div>
+  </body>
+  <script src="qrcode.min.js"></script>
+  <script src="game.js"></script>
+</html>
